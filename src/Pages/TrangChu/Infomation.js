@@ -1,38 +1,40 @@
 import React from 'react'
 
 export default function Infomation() {
-    let i = 0;
+    let i = true;
     let readMore1 = () => {
-        if (!i) {
+        if (i) {
             document.getElementById('read__more1').style.display = 'inline';
             document.getElementById('btn__readMore1').innerHTML = 'Thu gọn';
-            i = 1;
+            i = false;
         } else {
             document.getElementById('read__more1').style.display = 'none';
             document.getElementById('btn__readMore1').innerHTML = 'Xem thêm';
-            i = 0;
+            i = true;
         }
     }
+    let x = true;
     let readMore2 = () => {
-        if (!i) {
+        if (x) {
             document.getElementById('read__more2').style.display = 'inline';
             document.getElementById('btn__readMore2').innerHTML = 'Thu gọn';
-            i = 1;
+            x = false;
         } else {
             document.getElementById('read__more2').style.display = 'none';
             document.getElementById('btn__readMore2').innerHTML = 'Xem thêm';
-            i = 0;
+            x = true;
         }
     }
+    let y = true;
     let readMore3 = () => {
-        if (!i) {
+        if (y) {
             document.getElementById('read__more3').style.display = 'inline';
             document.getElementById('btn__readMore3').innerHTML = 'Thu gọn';
-            i = 1;
+            y = false;
         } else {
             document.getElementById('read__more3').style.display = 'none';
             document.getElementById('btn__readMore3').innerHTML = 'Xem thêm';
-            i = 0;
+            y = true;
         }
     }
 
@@ -344,7 +346,7 @@ export default function Infomation() {
                             </div>
                         </div>
                         <div className='readMore'>
-                            <a href="#read__more1" id='btn__readMore1' onClick={() => readMore1()} >Xem thêm</a>
+                            <a style={{ cursor: 'pointer' }} id='btn__readMore1' onClick={() => readMore1()} >Xem thêm</a>
                         </div>
                     </div>
                     <div className="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -643,7 +645,7 @@ export default function Infomation() {
                             </div>
                         </div>
                         <div className='readMore'>
-                            <a href="#read__more2" id='btn__readMore2' onClick={() => readMore2()} >Xem thêm</a>
+                            <a style={{ cursor: 'pointer' }} id='btn__readMore2' onClick={() => readMore2()} >Xem thêm</a>
                         </div>
                     </div>
                     <div className="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -942,7 +944,7 @@ export default function Infomation() {
                             </div>
                         </div>
                         <div className='readMore'>
-                            <a href="#read__more3" id='btn__readMore3' onClick={() => readMore3()} >Xem thêm</a>
+                            <a style={{ cursor: 'pointer' }} id='btn__readMore3' onClick={() => readMore3()} >Xem thêm</a>
                         </div>
                     </div>
                 </div>

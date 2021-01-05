@@ -67,6 +67,7 @@
                 top: 0;
                 right: 0;
                 bottom: 0;
+                z-index: 10;
                 width: 70%;
                 max-width: 100%;
                 background-color: white;
@@ -137,13 +138,14 @@
 }
 @media screen and (max-width: 768px){
     .header{
-        .header__menu{
+        position: unset;
+        .header__menu{  
             .header__menu-list{
                 display: none;
             }
             .header__menu-right{
                 .header__menu-icon{
-                    display: flex;
+                    display: block;
                 }
                 .header__menu-user{
                     display: none;

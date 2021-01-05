@@ -112,6 +112,7 @@ ul, li {
   top: 0;
   right: 0;
   bottom: 0;
+  z-index: 10;
   width: 70%;
   max-width: 100%;
   background-color: white;
@@ -204,13 +205,14 @@ ul, li {
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    position: unset;
+  }
   .header .header__menu .header__menu-list {
     display: none;
   }
   .header .header__menu .header__menu-right .header__menu-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
   .header .header__menu .header__menu-right .header__menu-user {
     display: none;
@@ -342,6 +344,15 @@ ul, li {
 .carousel .carousel-control-prev span, .carousel .carousel-control-next span {
   width: 50px;
   height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    margin: 0;
+  }
+  .carousel .carousel-inner .carousel-item .play__button {
+    display: inline;
+  }
 }
 
 .search {
@@ -956,6 +967,10 @@ ul, li {
 .infomation .myContainer .nav-tabs .nav-link.active:hover {
   -webkit-transform: none;
           transform: none;
+}
+
+.infomation .myContainer .infomation__content .info__content .row {
+  margin: 0;
 }
 
 .infomation .myContainer .infomation__content .info__content .info__content-item {

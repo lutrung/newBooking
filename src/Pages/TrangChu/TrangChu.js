@@ -12,7 +12,7 @@ export default function TrangChu(props) {
             <Carousel />
             <Search />
             <Showtime />
-            <MovieTheater />
+            <MovieTheater push={props.history} />
             <Infomation />
             <Application />
         </div>
