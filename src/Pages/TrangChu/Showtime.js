@@ -17,7 +17,7 @@ export default function Showtime(props) {
         slidesToShow: 4,
         slidesToScroll: 4,
         rows: 2,
-        autoplay: true,
+        autoplay: false,
         responsive: [
             {
                 breakpoint: 1024,

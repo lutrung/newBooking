@@ -2,7 +2,7 @@ import Axios from 'axios'
 import Swal from 'sweetalert2'
 import { ACCESSTOKEN, USER_LOGIN, DOMAIN, ACCOUNTLOGIN } from '../../Util/Config'
 import { history } from '../../Util/history'
-import { DANG_NHAP } from '../Const/QuanLyPhimConst'
+import { DANG_NHAP, LICH_SU_DAT_VE } from '../Const/QuanLyPhimConst'
 export const dangNhapApiAction = async (userLogin) => {
     return async (dispatch) => {
         try {
@@ -39,6 +39,24 @@ export const dangKyApiAction = async (userSignup) => {
             history.push('/dangnhap')
         } catch (err) {
             Swal.fire('Thông báo', err.response.data, 'error')
+        }
+    }
+}
+export const lichSuDatVeApiAction = async (account) => {
+    return async (dispatch) => {
+        try {
+            let result = await Axios({
+                url: DOMAIN + '/api/QuanLyNguoiDung/ThongTinTaiKhoan',
+                method: 'POST',
+                data: { taiKhoan: account },
+                headers: { 'Authorization': 'Bearer ' + localStorage.getItem(ACCESSTOKEN) }
+            })
+            dispatch({
+                type: LICH_SU_DAT_VE,
+                data: result.data
+            })
+        } catch (err) {
+            console.log(err.response.data);
         }
     }
 }

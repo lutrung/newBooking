@@ -7,7 +7,7 @@ export default function ChiTietPhim(props) {
     return (
         <div style={{ background: 'url("/img/bgChiTietPhim2.jpg") center center / cover' }}>
             <ThongTinPhim maPhim={maPhim} />
-            <ThongTinLichChieu />
+            <ThongTinLichChieu push={props.history} />
         </div>
     )
 }

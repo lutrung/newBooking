@@ -1,3 +1,4 @@
+import { DANG_NHAP, LICH_SU_DAT_VE } from "../Const/QuanLyPhimConst";
 
 const { USER_LOGIN, ACCOUNTLOGIN } = require("../../Util/Config")
 
@@ -16,9 +17,13 @@ const stateDefault = {
 }
 const QuanLyNguoiDungReducer = (state = stateDefault, action) => {
     switch (action.type) {
-        case 'DANG_NHAP': {
+        case DANG_NHAP: {
             state.userLogin = action.data
             state.accountLogin = action.account
+            return { ...state }
+        }
+        case LICH_SU_DAT_VE: {
+            state.bookingHistory = action.data
             return { ...state }
         }
         default: return { ...state }

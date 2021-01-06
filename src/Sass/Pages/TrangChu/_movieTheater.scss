@@ -1,9 +1,11 @@
 .movieTheater{
     padding-bottom: 50px;
+    max-width: 1000px;
+    margin: auto;
     .movieTheater__container{
         border: 1px solid #ddd;
         height: 600px;
-        width: 60%;
+        width: 100%;
         margin: auto;
         .movieTheater__logo{
             padding: 0;

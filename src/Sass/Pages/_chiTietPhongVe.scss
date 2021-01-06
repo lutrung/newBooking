@@ -1,10 +1,42 @@
 .chiTietPhongVe{
+    margin: 0;
+    padding: 0;
     .chiTietPhongVe_manHinh{
+        padding:0 5%;
+        width: 75%;
+        .thongTin__Rap{
+            margin: 20px 0;
+            .thongTin__Rap-content{
+                display: flex;
+                align-items: flex-end;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                .thongTin__Rap-diaChi{
+                    text-align: left;
+                    .ten__Rap{
+                        font-size: 15px;
+                        color: black;
+                        font-weight: bold;
+                    }
+                    .dia__Chi{
+                        font-size: 15px;
+                        color: #9b9b9b;
+                    }
+                }
+            }
+        }
         .manHinh{
-            margin-top: 50px;
+            img{
+                width: 100%;
+            }
         }
         .danhSachGhe{
             margin-bottom: 50px;
+            white-space: nowrap;
             .ghe {
                 width: 35px;
                 margin: 5px;
@@ -28,7 +60,8 @@
         .loaiGhe{
             display: flex;
             justify-content: center;
-            .ddd{
+            align-items: flex-start;
+            .loaiGhe__item{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -60,6 +93,8 @@
     .chiTietPhongVe_thongTin{
         box-shadow: 0 0 15px rgba(0,0,0,.3);
         position: relative;
+        padding: 10px;
+        width: 25%;
         .thongTin_tongTien{
             text-align: center;
             font-weight: bold;
@@ -94,5 +129,51 @@
             }
         }
         
+    }
+}
+@media screen and (max-width: 1200px){
+    .chiTietPhongVe{
+        .chiTietPhongVe__content{
+            .chiTietPhongVe_manHinh{
+                .danhSachGhe{
+                    overflow-x: scroll;
+                }
+                .danhSachGhe::-webkit-scrollbar{
+                    width: 15px;
+                    background-color: #ddd;
+                }
+                .danhSachGhe::-webkit-scrollbar-thumb{
+                    background-color: gray;
+                }
+                .danhSachGhe::-webkit-scrollbar{
+                    height: 5px;
+                    background-color: #ddd;
+                }
+                .danhSachGhe::-webkit-scrollbar-thumb{
+                    background-color: gray;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .chiTietPhongVe{
+        .chiTietPhongVe__content{
+            flex-direction: column;
+            .chiTietPhongVe_manHinh, .chiTietPhongVe_thongTin{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .chiTietPhongVe{
+        .chiTietPhongVe__content{
+            .chiTietPhongVe_manHinh{
+                .loaiGhe{
+                    overflow-x: scroll;
+                }
+            }
+        }
     }
 }

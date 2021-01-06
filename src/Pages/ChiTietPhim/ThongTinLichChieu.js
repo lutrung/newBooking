@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { layThongLichChieuPhimApiAction } from '../../Redux/Actions/QuanLyPhimActions';
 import moment from 'moment'
+import { USER_LOGIN } from '../../Util/Config';
 export default function ThongTinLichChieu(props) {
     const dispatch = useDispatch();
     useEffect(async () => {
@@ -52,10 +53,20 @@ export default function ThongTinLichChieu(props) {
                                                     <div className='showTimes__cinema-bottom'>
                                                         <p className='digital'>2D Digital</p>
                                                         {cumRap.lichChieuPhim?.slice(0, 5).map((lichChieu, index) => {
-                                                            return <a key={index} href='#' className='times'>
+                                                            // return <a key={index} href='#' className='times'>
+                                                            //     <span className='time__start'>{moment(lichChieu.ngayChieuGioChieu).format('hh:mm')}</span> ~
+                                                            //     <span className='time__end'> {moment(lichChieu.ngayChieuGioChieu).format('hh:mm')}</span>
+                                                            // </a>
+                                                            return <button className='times' key={index} onClick={async () => {
+                                                                if (localStorage.getItem(USER_LOGIN)) {
+                                                                    props.push.push('/chitietphongve/' + lichChieu.maLichChieu)
+                                                                } else {
+                                                                    props.push.push('/dangnhap')
+                                                                }
+                                                            }}>
                                                                 <span className='time__start'>{moment(lichChieu.ngayChieuGioChieu).format('hh:mm')}</span> ~
-                                                                <span className='time__end'> {moment(lichChieu.ngayChieuGioChieu).format('hh:mm')}</span>
-                                                            </a>
+                                                                  <span className='time__end'> {moment(lichChieu.ngayChieuGioChieu).format('hh:mm')}</span>
+                                                            </button>
                                                         })}
                                                     </div>
                                                 </div>

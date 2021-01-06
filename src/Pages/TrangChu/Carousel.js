@@ -11,7 +11,7 @@ export default function Carousel(props) {
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <img src="/img/Carousel/carousel2.png" className="d-block w-100" alt="..." />
-                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal1" />
+                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal1" alt='/img/Carousel/playicon.png' />
                     <div className="modal fade" id="exampleModal1">
                         <div className="modal-dialog modal-dialog-centered" role='document'>
                             <div className="modal-content">
@@ -24,7 +24,7 @@ export default function Carousel(props) {
                 </div>
                 <div className="carousel-item ">
                     <img src="/img/Carousel/carousel3.jpg" className="d-block w-100" alt="..." />
-                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal2" />
+                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal2" alt='/img/Carousel/playicon.png' />
                     <div className="modal fade" id="exampleModal2">
                         <div className="modal-dialog modal-dialog-centered" role='document'>
                             <div className="modal-content">
@@ -37,7 +37,7 @@ export default function Carousel(props) {
                 </div>
                 <div className="carousel-item ">
                     <img src="/img/Carousel/carousel4.jpg" className="d-block w-100" alt="..." />
-                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal3" />
+                    <img src="/img/Carousel/playicon.png" className='play__button' data-bs-toggle="modal" data-bs-target="#exampleModal3" alt='/img/Carousel/playicon.png' />
                     <div className="modal fade" id="exampleModal3">
                         <div className="modal-dialog modal-dialog-centered" role='document'>
                             <div className="modal-content">

@@ -7,3 +7,4 @@ export const DANG_NHAP = 'DANG_NHAP';
 export const THONG_TIN_PHONG_VE_ACTION = 'THONG_TIN_PHONG_VE_ACTION';
 export const DAT_GHE = 'DAT_GHE';
 export const DAT_VE_THANH_CONG = 'DAT_VE_THANH_CONG';
+export const LICH_SU_DAT_VE = 'LICH_SU_DAT_VE';

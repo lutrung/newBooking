@@ -1,11 +1,24 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom'
+import Swal from 'sweetalert2';
 export default function Header() {
     const userLogin = useSelector(state => state.QuanLyNguoiDungReducer.userLogin);
     const logOut = () => {
-        localStorage.clear();
-        window.location.href = '/';
+        Swal.fire({
+            title: 'Bạn có chắc muốn đăng xuất?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Có',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.clear();
+                window.location.href = '/';
+            }
+        })
     }
     return (
         <div className='header' id='header'>
@@ -32,18 +45,18 @@ export default function Header() {
                     </nav>
                     <div className='header__menu-right'>
                         <label htmlFor='nav-mobile-input' className='header__menu-icon'>
-                            <img src='./img/Header/menuicon.png' alt='' className='iconMenu' />
+                            <img src='/img/Header/menuicon.png' alt='/img/Header/menuicon.png' className='iconMenu' />
                         </label>
                         <input hidden type='checkbox' className='nav__input' id='nav-mobile-input' />
                         <label htmlFor='nav-mobile-input' className='header__menu-overlay'></label>
                         <nav className='nav__mobile'>
                             {userLogin.taiKhoan ?
                                 <>
-                                    <a className='nav__mobile-userLogin'>
+                                    <p className='nav__mobile-userLogin'>
                                         <img src='https://picsum.photos/50/50' alt='' style={{ borderRadius: '50%' }} />
                                         <NavLink to="/"><span className='text-danger mx-2' style={{ fontSize: '20px' }}>{userLogin.taiKhoan} </span></NavLink>
                                         <label htmlFor='nav-mobile-input'><i className="fa fa-angle-right user__arrow"></i></label>
-                                    </a>
+                                    </p>
                                     <ul className='nav__mobile-list'>
                                         <li>
                                             <a href='#search' className='nav__mobile-link'>Lịch chiếu</a>
