@@ -54,7 +54,7 @@ export default function Header() {
                                 <>
                                     <p className='nav__mobile-userLogin'>
                                         <img src='https://picsum.photos/50/50' alt='' style={{ borderRadius: '50%' }} />
-                                        <NavLink to="/"><span className='text-danger mx-2' style={{ fontSize: '20px' }}>{userLogin.taiKhoan} </span></NavLink>
+                                        <NavLink to="/thongtincanhan"><span className='text-danger mx-2' style={{ fontSize: '20px' }}>{userLogin.taiKhoan} </span></NavLink>
                                         <label htmlFor='nav-mobile-input'><i className="fa fa-angle-right user__arrow"></i></label>
                                     </p>
                                     <ul className='nav__mobile-list'>
@@ -108,7 +108,7 @@ export default function Header() {
                                         <a href='#' className='user__item-link'><img src='https://picsum.photos/50/50' alt='' className='logo_dangNhap' /></a>
                                     </li>
                                     <li className='user__item closeUser'>
-                                        <NavLink to="/"><span className='user__item-link text-danger'>Hello, {userLogin.taiKhoan} </span></NavLink>
+                                        <NavLink to="thongtincanhan/"><span className='user__item-link text-danger'>Hello, {userLogin.taiKhoan} </span></NavLink>
                                     </li>
                                     <li className='user__item closeUser' style={{ borderLeft: '1px solid #9b9b9b' }}>
                                         <NavLink to='/' className='user__item-link' onClick={() => logOut()}>Đăng xuất</NavLink>
